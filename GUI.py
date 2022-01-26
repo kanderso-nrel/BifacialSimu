@@ -96,7 +96,7 @@ SimulationDict = {
 'simulationName' : 'next_2_sun',
 'simulationMode' : 2, 
 'localFile' : True, # Decide wether you want to use a  weather file or try to download one for the coordinates
-'weatherFile' : (rootPath +'/WeatherData/Golden_USA/SRRLWeatherdata Nov_Dez_2.csv'), #weather file in TMY format 
+'weatherFile' : (rootPath +'/WeatherData/Aasen_Germany/wetterfile_2.csv'), #weather file in TMY format 
 'spectralReflectancefile' : (rootPath + '/ReflectivityData/grass_interpolated.csv'),
 'cumulativeSky' : False, # Mode for RayTracing: CumulativeSky or hourly
 'startHour' : (2019, 11, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
