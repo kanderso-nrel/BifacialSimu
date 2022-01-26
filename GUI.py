@@ -108,6 +108,7 @@ SimulationDict = {
 'ElectricalMode_simple': False, # simple electrical Simulation after PVSyst, use if rear module parameters are missing
 'limitAngle' : 0, # limit Angle for singleAxisTracking
 'hub_height' : 2, # Height of the rotation axis of the tracker [m]
+'clearance_height': 2, 
 'azimuth' : 90, #azimuth of the PV surface [deg] 90°: East, 135° : South-East, 180°:South
 'nModsx' : 20, #number of modules in x-axis
 'nModsy' : 1, #number of modules in y-axis
