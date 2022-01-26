@@ -93,8 +93,8 @@ import BifacialSimu_dataHandler
 
 # simulation parameters and variables
 SimulationDict = {
-'simulationName' : 'NREL_best_field_row_2',
-'simulationMode' : 1, 
+'simulationName' : 'next_2_sun',
+'simulationMode' : 2, 
 'localFile' : True, # Decide wether you want to use a  weather file or try to download one for the coordinates
 'weatherFile' : (rootPath +'/WeatherData/Golden_USA/SRRLWeatherdata Nov_Dez_2.csv'), #weather file in TMY format 
 'spectralReflectancefile' : (rootPath + '/ReflectivityData/interpolated_reflectivity.csv'),
