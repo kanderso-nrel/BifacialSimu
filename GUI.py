@@ -99,9 +99,9 @@ SimulationDict = {
 'weatherFile' : (rootPath +'/WeatherData/Aasen_Germany/wetterfile2.csv'), #weather file in TMY format 
 'spectralReflectancefile' : (rootPath + '/ReflectivityData/grass_interpolated.csv'),
 'cumulativeSky' : False, # Mode for RayTracing: CumulativeSky or hourly
-'startHour' : (2019, 11, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
-'endHour' : (2019, 11, 16, 0),  # Only for hourly simulation, yy, mm, dd, hh
-'utcOffset': -7,
+'startHour' : (2021, 1, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
+'endHour' : (2021, 5, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
+'utcOffset': 1,
 'tilt' : 90, #tilt of the PV surface [deg]
 'singleAxisTracking' : False, # singleAxisTracking or not
 'backTracking' : False, # Solar backtracking is a tracking control program that aims to minimize PV panel-on-panel shading 
