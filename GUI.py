@@ -102,7 +102,7 @@ SimulationDict = {
 'startHour' : (2019, 11, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
 'endHour' : (2019, 11, 16, 0),  # Only for hourly simulation, yy, mm, dd, hh
 'utcOffset': -7,
-'tilt' : 0, #tilt of the PV surface [deg]
+'tilt' : 90, #tilt of the PV surface [deg]
 'singleAxisTracking' : False, # singleAxisTracking or not
 'backTracking' : False, # Solar backtracking is a tracking control program that aims to minimize PV panel-on-panel shading 
 'ElectricalMode_simple': False, # simple electrical Simulation after PVSyst, use if rear module parameters are missing
