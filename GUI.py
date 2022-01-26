@@ -97,27 +97,27 @@ SimulationDict = {
 'simulationMode' : 2, 
 'localFile' : True, # Decide wether you want to use a  weather file or try to download one for the coordinates
 'weatherFile' : (rootPath +'/WeatherData/Golden_USA/SRRLWeatherdata Nov_Dez_2.csv'), #weather file in TMY format 
-'spectralReflectancefile' : (rootPath + '/ReflectivityData/interpolated_reflectivity.csv'),
+'spectralReflectancefile' : (rootPath + '/ReflectivityData/grass_interpolated.csv'),
 'cumulativeSky' : False, # Mode for RayTracing: CumulativeSky or hourly
 'startHour' : (2019, 11, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
 'endHour' : (2019, 11, 16, 0),  # Only for hourly simulation, yy, mm, dd, hh
 'utcOffset': -7,
-'tilt' : 10, #tilt of the PV surface [deg]
-'singleAxisTracking' : True, # singleAxisTracking or not
+'tilt' : 0, #tilt of the PV surface [deg]
+'singleAxisTracking' : False, # singleAxisTracking or not
 'backTracking' : False, # Solar backtracking is a tracking control program that aims to minimize PV panel-on-panel shading 
 'ElectricalMode_simple': False, # simple electrical Simulation after PVSyst, use if rear module parameters are missing
-'limitAngle' : 60, # limit Angle for singleAxisTracking
-'hub_height' : 1.3, # Height of the rotation axis of the tracker [m]
-'azimuth' : 180, #azimuth of the PV surface [deg] 90°: East, 135° : South-East, 180°:South
-'nModsx' : 1, #number of modules in x-axis
+'limitAngle' : 0, # limit Angle for singleAxisTracking
+'hub_height' : 2, # Height of the rotation axis of the tracker [m]
+'azimuth' : 90, #azimuth of the PV surface [deg] 90°: East, 135° : South-East, 180°:South
+'nModsx' : 20, #number of modules in x-axis
 'nModsy' : 1, #number of modules in y-axis
-'nRows' : 3, #number of rows
+'nRows' : 5, #number of rows
 'sensorsy' : 5, #number of sensors
 'moduley' : 2 ,#length of modules in y-axis
 'modulex' : 1, #length of modules in x-axis  
 'fixAlbedo': False, # Option to use the fix albedo
 'hourlyMeasuredAlbedo' : True, # True if measured albedo values in weather file
-'hourlySpectralAlbedo' : True, # Option to calculate a spectral Albedo 
+'hourlySpectralAlbedo' : False, # Option to calculate a spectral Albedo 
 'variableAlbedo': False, # Option to calculate sun position dependend, variable albedo
 'albedo' : 0.26, # Measured Albedo average value, if hourly isn't available
 'frontReflect' : 0.03, #front surface reflectivity of PV rows
