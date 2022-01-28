@@ -2,10 +2,10 @@
 """
 Created on Mon Jun  7 11:39:16 2021
 @author:        
-    CIRE TH Cologne
-    Felix Schemann
-    Frederik Klag
-    Sebastian Nows
+    Eva-Maria Grommes
+
+Additional co-authors can be found here:
+https://github.com/cire-thk/bifacialSimu    
 
 name:
     BifacialSimu - SimulationController
@@ -14,9 +14,6 @@ overview:
     Read the input data and settings from the main script, calls the functions 
     of the handlers to perform the bifacial simulation of PV-Modules with
     View Factors and/or Ray Tracing method
-
-last changes:
-    07.06.21 created
 
 
 """
@@ -58,7 +55,7 @@ def startSimulation(simulationDict, moduleDict, resultsPath):
     ####################################################
     
     # optional spectralAlbedo calculation
-    if simulationDict['spectralAlbedo'] == True:
+    if simulationDict['hourlySpectralAlbedo'] == True:
         # spectralAlbedoHandler calculate the spectral albedo and write it in the weatherfile in colume 'albedo'
         BifacialSimu_spectralAlbedoHandler.calculateAlbedo(simulationDict, df, resultsPath)
     

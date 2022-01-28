@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jun  7 11:39:16 2021
+
 @author:        
-    CIRE TH Cologne
     Eva-Maria Grommes
-    Felix Schemann
-    Frederik Klag
-    Sebastian Nows
+
+Additional co-authors can be found here:
+https://github.com/cire-thk/bifacialSimu    
 
 name:
     BifacialSimu - radiationHandler
@@ -15,10 +15,6 @@ overview:
     Manages the calculation of the radiation over the extern modules
     bifacial Radiance and/or PVfactors and delivers the radiation data for the 
     further simulation of BifacialSimu
-
-
-last changes:
-    07.06.21 created
 
 """
 
@@ -946,6 +942,8 @@ class ViewFactors:
         
         ####################################################
         
+        # function to average the hourly front and back irradiances of the pv rows to daily values
+        
         def daily_mean_irradiance(df_reportVF):
             df1 = df_reportVF  
 
@@ -1091,9 +1089,9 @@ class ViewFactors:
         if onlyFrontscan == False:
             report = engine.run_full_mode(fn_build_report=Segments_report)
             df_reportVF = pd.DataFrame(report, index=df.index)
-            df2 = daily_mean_irradiance(df_reportVF)
-            plot_irradiance1(df2)
-            plot_irradiance2(df2)
+            #df2 = daily_mean_irradiance(df_reportVF)  # erzeugt dataframe mit gemittelten täglichen irradiances
+            #plot_irradiance1(df2)    # Plot mit der durschnittlichen front und back irradiance aller Reihen für jeden Tag
+            #plot_irradiance2(df2)    # Plot mit der front und back irradiance für jede Reihen für jeden Tag
             
             # Print results as .csv in directory
             df_reportVF.to_csv(resultsPath + "radiation_qabs_results.csv")
