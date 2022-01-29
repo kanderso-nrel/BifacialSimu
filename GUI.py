@@ -93,32 +93,31 @@ import BifacialSimu_dataHandler
 
 # simulation parameters and variables
 SimulationDict = {
-'simulationName' : 'next_2_sun',
-'simulationMode' : 2, 
+'simulationName' : 'NREL_best_field_row_2',
+'simulationMode' : 1, 
 'localFile' : True, # Decide wether you want to use a  weather file or try to download one for the coordinates
-'weatherFile' : (rootPath +'/WeatherData/Aasen_Germany/wetterfile2.csv'), #weather file in TMY format 
-'spectralReflectancefile' : (rootPath + '/ReflectivityData/grass_interpolated.csv'),
+'weatherFile' : (rootPath +'/WeatherData/Golden_USA/SRRLWeatherdata Nov_Dez_2.csv'), #weather file in TMY format 
+'spectralReflectancefile' : (rootPath + '/ReflectivityData/interpolated_reflectivity.csv'),
 'cumulativeSky' : False, # Mode for RayTracing: CumulativeSky or hourly
-'startHour' : (2021, 1, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
-'endHour' : (2021, 5, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
-'utcOffset': 1,
-'tilt' : 90, #tilt of the PV surface [deg]
-'singleAxisTracking' : False, # singleAxisTracking or not
+'startHour' : (2019, 11, 1, 0),  # Only for hourly simulation, yy, mm, dd, hh
+'endHour' : (2019, 11, 16, 0),  # Only for hourly simulation, yy, mm, dd, hh
+'utcOffset': -7,
+'tilt' : 10, #tilt of the PV surface [deg]
+'singleAxisTracking' : True, # singleAxisTracking or not
 'backTracking' : False, # Solar backtracking is a tracking control program that aims to minimize PV panel-on-panel shading 
 'ElectricalMode_simple': False, # simple electrical Simulation after PVSyst, use if rear module parameters are missing
-'limitAngle' : 0, # limit Angle for singleAxisTracking
-'hub_height' : 2, # Height of the rotation axis of the tracker [m]
-'clearance_height': 2, 
-'azimuth' : 90, #azimuth of the PV surface [deg] 90°: East, 135° : South-East, 180°:South
-'nModsx' : 20, #number of modules in x-axis
+'limitAngle' : 60, # limit Angle for singleAxisTracking
+'hub_height' : 1.3, # Height of the rotation axis of the tracker [m]
+'azimuth' : 180, #azimuth of the PV surface [deg] 90°: East, 135° : South-East, 180°:South
+'nModsx' : 1, #number of modules in x-axis
 'nModsy' : 1, #number of modules in y-axis
-'nRows' : 5, #number of rows
+'nRows' : 3, #number of rows
 'sensorsy' : 5, #number of sensors
 'moduley' : 2 ,#length of modules in y-axis
 'modulex' : 1, #length of modules in x-axis  
 'fixAlbedo': False, # Option to use the fix albedo
 'hourlyMeasuredAlbedo' : True, # True if measured albedo values in weather file
-'hourlySpectralAlbedo' : False, # Option to calculate a spectral Albedo 
+'hourlySpectralAlbedo' : True, # Option to calculate a spectral Albedo 
 'variableAlbedo': False, # Option to calculate sun position dependend, variable albedo
 'albedo' : 0.26, # Measured Albedo average value, if hourly isn't available
 'frontReflect' : 0.03, #front surface reflectivity of PV rows
@@ -126,7 +125,7 @@ SimulationDict = {
 'longitude' : -105.172, 
 'latitude' : 39.739,
 'gcr' : 0.35, #ground coverage ratio (module area / land use)
-'module_type' : 'Jollywood', #Name of Module
+'module_type' : 'NREL row 2', #Name of Module
 }
 
 # is in Function StartSimulation()
@@ -1005,12 +1004,12 @@ class Window(tk.Tk):
                 Label_LimitAngle.config(state="disabled")
                 Entry_LimitAngle.config(state="disabled")
                 Label_LimitAnglePar.config(state="disabled")
-                Label_HubHeight.config(state="normal")
-                Entry_HubHeight.config(state="normal")
-                Label_HubHeightPar.config(state="normal")
-                Label_ClearanceHeight.config(state="disabled")
-                Entry_ClearanceHeight.config(state="disabled")
-                Label_ClearanceHeightPar.config(state="disabled")
+                Label_HubHeight.config(state="disabled")
+                Entry_HubHeight.config(state="disabled")
+                Label_HubHeightPar.config(state="disabled")
+                Label_ClearanceHeight.config(state="normal")
+                Entry_ClearanceHeight.config(state="normal")
+                Label_ClearanceHeightPar.config(state="normal")
                  
                  
             else:
@@ -1021,12 +1020,12 @@ class Window(tk.Tk):
                 Label_LimitAngle.config(state="normal")
                 Entry_LimitAngle.config(state="normal")
                 Label_LimitAnglePar.config(state="normal")
-                Label_HubHeight.config(state="normal")
-                Entry_HubHeight.config(state="normal")
-                Label_HubHeightPar.config(state="normal")
-                Label_ClearanceHeight.config(state="disabled")
-                Entry_ClearanceHeight.config(state="disabled")
-                Label_ClearanceHeightPar.config(state="disabled")
+                Label_HubHeight.config(state="disabled")
+                Entry_HubHeight.config(state="disabled")
+                Label_HubHeightPar.config(state="disabled")
+                Label_ClearanceHeight.config(state="normal")
+                Entry_ClearanceHeight.config(state="normal")
+                Label_ClearanceHeightPar.config(state="normal")
                 
                 
                 
