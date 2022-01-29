@@ -78,26 +78,5 @@
         "zeta": 0.06,
 		"moduley": 2.13,
 		"modulex": 1.042
-},
-        "Jollywood":{
-		"bi_factor": 0.8,
-		"n_front": 0.1941,
-        "I_sc_f": 9.93,
-        "I_sc_r": 7.00,
-        "V_oc_f": 49.5,
-        "V_oc_r": 48.5,
-        "V_mpp_f": 40.2,
-        "V_mpp_r": 40.2,
-        "I_mpp_f": 9.44,
-        "I_mpp_r": 7.0,
-        "P_mpp": 380,
-        "T_koeff_P": -0.0032,
-        "T_amb": 20,
-        "T_koeff_I": 0.00046,
-        "T_koeff_V": -0.0026,
-        "zeta": 0.06,
-		"moduley": 1.98,
-		"modulex": 0.098
-    }
-   			
+    }			
 }
